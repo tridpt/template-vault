@@ -1,0 +1,29 @@
+{
+  "name": "template-vault",
+  "version": "1.0.0",
+  "description": "A web app to store, tag, search, preview and download your web templates.",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --import ./test/setup.js --test"
+  },
+  "keywords": [
+    "templates",
+    "gallery",
+    "storage",
+    "upload"
+  ],
+  "author": "tridpt",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.16",
+    "better-sqlite3": "^11.8.1",
+    "express": "^4.21.2",
+    "multer": "^2.0.1"
+  }
+}

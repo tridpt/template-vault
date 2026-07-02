@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Template Vault</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>📦 Template Vault</h1>
+    <div class="topbar-actions">
+      <button id="exportBtn" class="btn" title="Tải toàn bộ dữ liệu về">⬇ Export</button>
+      <button id="importBtn" class="btn" title="Khôi phục từ file backup">⬆ Import</button>
+      <input id="importFile" type="file" accept=".zip" hidden />
+      <button id="authBtn" class="btn" hidden></button>
+      <button id="openUpload" class="btn primary">+ Thêm template</button>
+    </div>
+  </header>
+
+  <section class="controls">
+    <div class="controls-row">
+      <input id="search" type="search" placeholder="Tìm theo tên hoặc mô tả..." />
+      <label class="sort">Sắp xếp
+        <select id="sort">
+          <option value="newest">Mới nhất</option>
+          <option value="oldest">Cũ nhất</option>
+          <option value="title">Tên (A→Z)</option>
+          <option value="downloads">Tải nhiều nhất</option>
+        </select>
+      </label>
+    </div>
+    <div id="tagFilter" class="tag-filter"></div>
+  </section>
+
+  <main id="grid" class="grid"></main>
+  <p id="empty" class="empty" hidden>Chưa có template nào. Bấm "Thêm template" để bắt đầu.</p>
+  <div id="pager" class="pager"></div>
+
+  <!-- Upload / Edit modal -->
+  <div id="modal" class="modal" hidden>
+    <div class="modal-box">
+      <h2 id="modalTitle">Thêm template</h2>
+      <form id="uploadForm">
+        <input type="hidden" name="id" />
+        <label>Tên <span class="req">*</span>
+          <input name="title" required maxlength="120" />
+        </label>
+        <label>Mô tả
+          <textarea name="description" rows="3"></textarea>
+        </label>
+        <label>Tags (phân cách bằng dấu phẩy)
+          <input name="tags" placeholder="landing, dark, tailwind" />
+        </label>
+        <label>File template (.zip) <span id="archiveHint" class="hint"></span>
+          <input name="archive" type="file" accept=".zip" />
+        </label>
+        <label>Ảnh thumbnail <span id="thumbHint" class="hint"></span>
+          <input name="thumbnail" type="file" accept="image/*" />
+        </label>
+        <div class="modal-actions">
+          <button type="button" id="cancelUpload" class="btn">Hủy</button>
+          <button type="submit" class="btn primary">Lưu</button>
+        </div>
+        <p id="formError" class="error" hidden></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Detail modal -->
+  <div id="detail" class="modal" hidden>
+    <div class="modal-box detail-box">
+      <button id="detailClose" class="close-x" aria-label="Đóng">×</button>
+      <div class="detail-hero"><img id="detailThumb" alt="" /></div>
+      <h2 id="detailTitle"></h2>
+      <p id="detailDesc" class="detail-desc"></p>
+      <div id="detailTags" class="card-tags"></div>
+      <p id="detailMeta" class="detail-meta"></p>
+      <div class="detail-actions">
+        <a id="detailPreview" class="btn small" target="_blank">Preview</a>
+        <a id="detailDownload" class="btn small">Tải zip</a>
+        <button id="detailEdit" class="btn small">Sửa</button>
+      </div>
+      <h3 class="files-title">Danh sách file</h3>
+      <div id="detailFiles" class="files"></div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

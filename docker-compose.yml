@@ -1,0 +1,19 @@
+# Run Template Vault with:  docker compose up --build
+#
+# Compose reads the local .env for ${VAR} interpolation, so ADMIN_TOKEN is
+# passed in at runtime and never baked into the image. Data and uploaded files
+# are persisted via bind mounts so they survive container rebuilds.
+services:
+  template-vault:
+    build: .
+    image: template-vault:latest
+    ports:
+      - "${PORT:-4000}:4000"
+    environment:
+      PORT: "4000"
+      # Leave empty for open mode, or set a secret to require auth on writes.
+      ADMIN_TOKEN: "${ADMIN_TOKEN:-}"
+    volumes:
+      - ./data:/app/data
+      - ./storage:/app/storage
+    restart: unless-stopped
