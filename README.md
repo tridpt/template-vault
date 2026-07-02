@@ -1,6 +1,12 @@
 # Template Vault
 
+[![CI](https://github.com/tridpt/template-cault/actions/workflows/ci.yml/badge.svg)](https://github.com/tridpt/template-cault/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Node](https://img.shields.io/badge/node-%3E%3D20.6-brightgreen.svg)](package.json)
+
 A small web app to store, tag, search, preview and download your web templates.
+
+For detailed Vietnamese documentation, see [`TAI_LIEU.md`](TAI_LIEU.md).
 
 ## Features
 

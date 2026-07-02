@@ -13,12 +13,23 @@
     "templates",
     "gallery",
     "storage",
-    "upload"
+    "upload",
+    "sqlite",
+    "express",
+    "web-templates"
   ],
   "author": "tridpt",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tridpt/template-cault.git"
+  },
+  "homepage": "https://github.com/tridpt/template-cault#readme",
+  "bugs": {
+    "url": "https://github.com/tridpt/template-cault/issues"
+  },
   "engines": {
-    "node": ">=20"
+    "node": ">=20.6"
   },
   "dependencies": {
     "adm-zip": "^0.5.16",
