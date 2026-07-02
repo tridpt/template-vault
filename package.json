@@ -22,11 +22,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tridpt/template-cault.git"
+    "url": "git+https://github.com/tridpt/template-vault.git"
   },
-  "homepage": "https://github.com/tridpt/template-cault#readme",
+  "homepage": "https://github.com/tridpt/template-vault#readme",
   "bugs": {
-    "url": "https://github.com/tridpt/template-cault/issues"
+    "url": "https://github.com/tridpt/template-vault/issues"
   },
   "engines": {
     "node": ">=20.6"

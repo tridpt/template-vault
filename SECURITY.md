@@ -5,7 +5,7 @@
 Please report security issues **privately**. Do not open a public issue, pull
 request, or discussion for a vulnerability.
 
-- Use GitHub's [private vulnerability reporting](https://github.com/tridpt/template-cault/security/advisories/new) (Security tab → "Report a vulnerability"), or
+- Use GitHub's [private vulnerability reporting](https://github.com/tridpt/template-vault/security/advisories/new) (Security tab → "Report a vulnerability"), or
 - Contact the maintainer directly through their GitHub profile.
 
 Please include:

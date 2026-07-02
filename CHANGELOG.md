@@ -33,4 +33,4 @@ and the project follows [Semantic Versioning](https://semver.org/).
 - Vietnamese technical documentation (`TAI_LIEU.md`).
 - Continuous integration (GitHub Actions) running the test suite on Node 20 and 22.
 
-[1.0.0]: https://github.com/tridpt/template-cault/releases/tag/v1.0.0
+[1.0.0]: https://github.com/tridpt/template-vault/releases/tag/v1.0.0
