@@ -6,6 +6,8 @@
 
 A small web app to store, tag, search, preview and download your web templates.
 
+![Template Vault](docs/screenshot.png)
+
 For detailed Vietnamese documentation, see [`TAI_LIEU.md`](TAI_LIEU.md).
 
 ## Features
